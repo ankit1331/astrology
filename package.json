@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier ./src --write"
   },
   "dependencies": {
     "@types/node": "20.6.4",
@@ -22,6 +23,9 @@
     "zustand": "^4.4.1"
   },
   "devDependencies": {
+    "@types/bootstrap": "^5.2.7",
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "^3.0.3",
     "sass": "^1.68.0"
   }
 }

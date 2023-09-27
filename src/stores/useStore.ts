@@ -1,5 +1,5 @@
 // useStore.ts
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 export const useStore = (store, callback) => {
   const result = store(callback);
