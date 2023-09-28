@@ -1,37 +1,26 @@
-import "../theme/main.scss";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import '../theme/main.scss';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-    title: "Jageshwar Astro Consultants",
-    description:
-        "We provide Online astrology services as well as Face to Face Astrology consultation for all types of problems",
+  title: 'Jageshwar Astro Consultants',
+  description:
+    'We provide Online astrology services as well as Face to Face Astrology consultation for all types of problems',
 };
 
 export default function RootLayout({
-    children,
+  children,
 }: {
-    children: React.ReactNode;
+  children: React.ReactNode;
 }) {
-    return (
-        <html lang="en">
-            <link
-                rel="icon"
-                href="/images/cropped-logo.webp"
-                sizes="32x32"
-            ></link>
-            <link
-                rel="icon"
-                href="/images/cropped-logo.webp"
-                sizes="192x192"
-            ></link>
-            <link
-                rel="apple-touch-icon"
-                href="/images/cropped-logo.webp"
-            ></link>
-            <body className={inter.className}>{children}</body>
-        </html>
-    );
+  return (
+    <html lang='en'>
+      <link rel='icon' href='/images/cropped-logo.webp' sizes='32x32'></link>
+      <link rel='icon' href='/images/cropped-logo.webp' sizes='192x192'></link>
+      <link rel='apple-touch-icon' href='/images/cropped-logo.webp'></link>
+      <body className={inter.className}>{children}</body>
+    </html>
+  );
 }

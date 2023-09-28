@@ -1,16 +1,17 @@
 // src/stores/theme-store.ts
-import {create} from 'zustand';
+import { create } from 'zustand';
 
 interface ThemeState {
-    mode: "light" | "dark",
-    changeMode: () => void
+  mode: 'light' | 'dark';
+  changeMode: () => void;
 }
 
 const useThemeState = create<ThemeState>()((set) => ({
-    mode: "light",
-    changeMode: () => set((state) => ({
-        mode: state.mode === 'light' ? 'dark' : 'light'
+  mode: 'light',
+  changeMode: () =>
+    set((state) => ({
+      mode: state.mode === 'light' ? 'dark' : 'light',
     })),
-}))
+}));
 
 export default useThemeState;
