@@ -1,11 +1,22 @@
 'use client';
+import Hero from '@/components/Hero/Hero';
 import useThemeState from '../stores/theme-store';
+import AboutUs from '@/components/AboutUs/AboutUs';
+import MyServices from '@/components/MyServices/MyServices';
+import Pricing from '@/components/Pricing/Pricing';
+import GetInTouch from '@/components/GetInTouch/GetInTouch';
 
 export default function Home() {
   const { mode, changeMode } = useThemeState((state) => state);
   return (
     <main>
-      <button onClick={changeMode}>Toggle Theme</button>
+      <Hero />
+      <AboutUs />
+      <MyServices />
+      <Pricing />
+      <GetInTouch />
+
+      {/* <button onClick={changeMode}>Toggle Theme</button>
       <div>{mode}</div>
       <button type='button' className='btn btn-primary'>
         Primary
@@ -34,7 +45,7 @@ export default function Home() {
 
       <button type='button' className='btn btn-link'>
         Link
-      </button>
+      </button> */}
     </main>
   );
 }
