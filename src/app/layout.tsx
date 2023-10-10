@@ -1,3 +1,4 @@
+import Header from '@/components/Header/Header';
 import '../theme/main.scss';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -20,7 +21,10 @@ export default function RootLayout({
       <link rel='icon' href='/images/cropped-logo.webp' sizes='32x32'></link>
       <link rel='icon' href='/images/cropped-logo.webp' sizes='192x192'></link>
       <link rel='apple-touch-icon' href='/images/cropped-logo.webp'></link>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
