@@ -1,0 +1,26 @@
+.hero-bg-image {
+  background-image: url(#{$base-url}/yellow-star-bg.png);
+  background-position: center center;
+  background-size: cover;
+  opacity: 0.15;
+  transition:
+    background 0.3s,
+    border-radius 0.3s,
+    opacity 0.3s;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+
+.hero-bg {
+  position: relative;
+  transition:
+    background 0.3s,
+    border 0.3s,
+    border-radius 0.3s,
+    box-shadow 0.3s;
+  padding: 60px 0px 0px 0px;
+  background-color: $brand-color;
+}
