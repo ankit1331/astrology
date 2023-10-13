@@ -1,24 +1,42 @@
-import React from 'react';
+'use client';
+import React, { useRef } from 'react';
 
 const Header = () => {
+  const navRef = useRef(null);
+  const handleToggle = () => {
+    navRef?.current?.classList.toggle('collapsible--expanded');
+  };
   return (
-    <nav id='pr-nav' className='nav-bar'>
-      <div className='logo'>
-        <a href='#'>
-          <img src='/images/logo.png' alt='logo' />
-        </a>
-      </div>
-      <div className='menu-items'>
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Services</li>
-          <li>Consultancy Fees</li>
-          <li>Gau Sewa</li>
-          <li>Payments</li>
-          <li>Contact Us</li>
-        </ul>
-      </div>
+    <nav className='nav collapsible' ref={navRef}>
+      <a className='nav__brand' href='/'>
+        <img src='images/logo.png' alt='' />
+      </a>
+      <svg className='icon icon--white nav__toggler' onClick={handleToggle}>
+        <use xlinkHref='images/sprite.svg#menu'></use>
+      </svg>
+      <ul className='list nav__list collapsible__content'>
+        <li className='nav__item'>
+          <a href='#'>Home</a>
+        </li>
+        <li className='nav__item'>
+          <a href='#'>About Us</a>
+        </li>
+        <li className='nav__item'>
+          <a href='#'>Services</a>
+        </li>
+        <li className='nav__item'>
+          <a href='#'>Consultancy</a>
+        </li>
+        <li className='nav__item'>
+          <a href='#'>Gau Sewa</a>
+        </li>
+        <li className='nav__item'>
+          <a href='#'>Payments</a>
+        </li>
+        <li className='nav__item'>
+          <a href='#'>Contact Us</a>
+        </li>
+      </ul>
     </nav>
   );
 };
